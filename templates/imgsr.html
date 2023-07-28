@@ -1,0 +1,46 @@
+<!doctype html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="referrer" content="no-referrer">
+<title>上传</title>
+<meta name="description" content="转换、上传页面">
+<meta name="keywords" content="转换、上传">
+<link rel="icon" sizes="any" mask="" href="../static/images/icon.png">
+</head>
+
+<body>
+<center>
+<div class="warning">
+	{% for message in get_flashed_messages() %}
+		<strong>Warning!</strong> {{ message }}
+	{% endfor %}
+</div>
+<br><br><br>
+<h1>上传文件</h1>
+<br><br>
+<form action="" method=post enctype=multipart/form-data>
+	<table border="0">
+		<tr><td colspan="2"><input type=file name=file></td></tr>
+		<tr><td colspan="2">放大倍数</td></tr>
+		<tr><td><input type="radio" name="scale" value=2 checked>2倍</td>
+			<td><input type="radio" name="scale" value=4 checked>4倍</td>
+		</tr>
+		<tr><td colspan="2">放大算法</td></tr>
+		<tr><td><input type="radio" name="mode" value=bicubic checked>插值</td>
+			<td><input type="radio" name="mode" value=network >神经网络（开发中）</td></tr>
+		<tr align="center"><td colspan="2"><input type=submit value=上传></td></tr>
+	</table>
+</form>
+
+<h4>须知：</h4>
+<table border="0">
+<tr>
+<td align="left" valign="middle" border="0">1、文件限制60MB以下</td>
+</tr>
+<tr>
+<td align="left" valign="middle" border="0">2、基于python的flask库</td>
+</tr>
+</table>
+<center>
+<body>

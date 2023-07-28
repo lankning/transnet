@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="referrer" content="no-referrer">
+<title>转格式网</title>
+<meta name="description" content="文件、图片，格式转换">
+<meta name="keywords" content="格式，转换">
+<link rel="icon" sizes="any" mask="" href="../static/images/icon.png">
+</head>
+
+<center>
+<div class="warning">
+        {% for message in get_flashed_messages() %}
+			<strong>Warning!</strong> {{ message }}
+        {% endfor %}
+    </div>
+</center><br>
+
+<center><h1>转格式网</h1></center><br><br>
+<!-- <hr/> -->
+
+<body bgcolor="#E6E6FA">
+	<div align="center">
+		<table border="2">
+			<tr>
+				<td colspan="3" align="center"><h2>PDF</h2></td>
+			</tr>
+			<tr>
+				<td><h2><a href="pdf2img">PDF转图片</a></h2></td>
+				<td><h2><a href="pdfmerge">PDF合并</a></h2></td>
+				<td><h2><a href=""></a></h2></td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center"><h2>图片</h2></td>
+			</tr>
+			<tr>
+				<td><h2><a href="heic2jpg">Heic转JPG</a></h2></td>
+				<td><h2><a href="imgcpr">图片压缩</a></h2></td>
+				<td><h2><a href="imgsr">超分辨率</a></h2></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

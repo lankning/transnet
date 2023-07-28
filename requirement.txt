@@ -1,0 +1,6 @@
+PyMuPDF
+PyPDF2
+flask
+pillow_heif
+Pillow
+gevent
